@@ -3,9 +3,9 @@ package main
 import (
 	"encoding/xml"
 	"fmt"
-    "io/ioutil"
-    "net/http"
-    "time"
+	"io/ioutil"
+	"net/http"
+	"time"
 
 	"database/sql"
 
@@ -63,7 +63,7 @@ func main() {
 
 func httpGet(url string) string {
 	response, _ := http.Get(url)
-    body, _ := ioutil.ReadAll(response.Body)
+	body, _ := ioutil.ReadAll(response.Body)
 	defer response.Body.Close()
 	return string(body)
 }
